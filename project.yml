@@ -1,0 +1,37 @@
+name: StormVRHead
+options:
+  bundleIdPrefix: com.stormvr
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGNING_ALLOWED: "NO"
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGN_IDENTITY: ""
+targets:
+  StormVRHead:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: StormVR Head
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - audio
+          - location
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSMotionUsageDescription: "Le o giroscopio para enviar a posicao da cabeca ao PC."
+        NSLocalNetworkUsageDescription: "Envia a posicao da cabeca ao driver StormVR no seu PC pela rede local."
+        NSLocationWhenInUseUsageDescription: "Mantem o app ativo em segundo plano enquanto voce usa o Moonlight (nenhuma localizacao e guardada ou enviada)."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.stormvr.head
